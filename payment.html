@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>支付</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.e8e4f3a3.css" as="style"><link rel="preload" href="/assets/js/app.d2eb2e1c.js" as="script"><link rel="preload" href="/assets/js/2.733019b2.js" as="script"><link rel="preload" href="/assets/js/13.c990901a.js" as="script"><link rel="prefetch" href="/assets/js/10.cd76431a.js"><link rel="prefetch" href="/assets/js/11.84e4a12e.js"><link rel="prefetch" href="/assets/js/12.28c6e023.js"><link rel="prefetch" href="/assets/js/14.f79d9980.js"><link rel="prefetch" href="/assets/js/15.2c8d9ed9.js"><link rel="prefetch" href="/assets/js/3.df158bf2.js"><link rel="prefetch" href="/assets/js/4.d12742be.js"><link rel="prefetch" href="/assets/js/5.216cae74.js"><link rel="prefetch" href="/assets/js/6.2d0a63f8.js"><link rel="prefetch" href="/assets/js/7.d81fbbb1.js"><link rel="prefetch" href="/assets/js/8.a60ce3f4.js"><link rel="prefetch" href="/assets/js/9.8e1ea977.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e8e4f3a3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="支付"><a href="#支付" class="header-anchor">#</a> 支付</h1> <p>order_num 订单号</p> <p>transaction_id 支付流水号</p> <h2 id="成功后"><a href="#成功后" class="header-anchor">#</a> 成功后</h2> <div class="language- extra-class"><pre class="language-text"><code>do_action(&quot;payment.success&quot;,$order_num);
+do_action(&quot;payment.success.weixin&quot;,$order_num);
+</code></pre></div><h2 id="退款成功后"><a href="#退款成功后" class="header-anchor">#</a> 退款成功后</h2> <div class="language- extra-class"><pre class="language-text"><code>do_action(&quot;payment.refund.success&quot;,$pay_refund);
+</code></pre></div><p>其中<code>$pay_refund</code>值</p> <div class="language- extra-class"><pre class="language-text"><code>$pay_refund = get_where(&quot;payment_base_refund&quot;,['_id'=&gt;$pay_refund_id],1);
+$pay_refund['pay_base_id']   = $pay_base_id;
+$pay_refund['order_num']  = $order_num;
+$pay_refund['refund_amount'] = $refund_amount;
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.d2eb2e1c.js" defer></script><script src="/assets/js/2.733019b2.js" defer></script><script src="/assets/js/13.c990901a.js" defer></script>
+  </body>
+</html>
