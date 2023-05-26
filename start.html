@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>依赖</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.e8e4f3a3.css" as="style"><link rel="preload" href="/assets/js/app.e9c0b1e7.js" as="script"><link rel="preload" href="/assets/js/2.733019b2.js" as="script"><link rel="preload" href="/assets/js/16.4ae2d59d.js" as="script"><link rel="prefetch" href="/assets/js/10.070e85ef.js"><link rel="prefetch" href="/assets/js/11.370144d3.js"><link rel="prefetch" href="/assets/js/12.5e8e02d4.js"><link rel="prefetch" href="/assets/js/13.1e3ef6dc.js"><link rel="prefetch" href="/assets/js/14.19d4bddb.js"><link rel="prefetch" href="/assets/js/15.1b24a5fb.js"><link rel="prefetch" href="/assets/js/3.a72851b7.js"><link rel="prefetch" href="/assets/js/4.d12742be.js"><link rel="prefetch" href="/assets/js/5.216cae74.js"><link rel="prefetch" href="/assets/js/6.2d0a63f8.js"><link rel="prefetch" href="/assets/js/7.a01dd56a.js"><link rel="prefetch" href="/assets/js/8.553d0e29.js"><link rel="prefetch" href="/assets/js/9.8521e35c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e8e4f3a3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="依赖"><a href="#依赖" class="header-anchor">#</a> 依赖</h1> <h3 id="软件环境"><a href="#软件环境" class="header-anchor">#</a> 软件环境</h3> <ul><li>ngnix</li> <li>mongodb &gt;= 4.4</li> <li>redis</li> <li>php = 8.1</li></ul> <h3 id="php扩展"><a href="#php扩展" class="header-anchor">#</a> php扩展</h3> <ul><li>mongodb &gt;= 1.13.0</li> <li>mbstring</li> <li>redis</li> <li>json</li> <li>iconv</li> <li>gd</li> <li>fileinfo</li> <li>curl</li></ul> <h1 id="ng重写"><a href="#ng重写" class="header-anchor">#</a> NG重写</h1> <div class="language- extra-class"><pre class="language-text"><code>if (!-f $request_filename) {
+    rewrite  ^(.*)$  /index.php?s=/$1  last;
+}
+</code></pre></div><h1 id="常用操作"><a href="#常用操作" class="header-anchor">#</a> 常用操作</h1> <h2 id="记录日志"><a href="#记录日志" class="header-anchor">#</a> 记录日志</h2> <div class="language- extra-class"><pre class="language-text"><code>insert_trace($arr = [
+    'nid'=&gt;'',
+    'msg'=&gt;'',
+    'data'=&gt;'',
+],$type = 'order')
+</code></pre></div><h2 id="获取操作记录"><a href="#获取操作记录" class="header-anchor">#</a> 获取操作记录</h2> <div class="language- extra-class"><pre class="language-text"><code>get_trace($type='order',$where = [])
+</code></pre></div><h1 id="多站点管理"><a href="#多站点管理" class="header-anchor">#</a> 多站点管理</h1> <p>向 site_menu 表写入</p> <div class="language- extra-class"><pre class="language-text"><code>  &quot;title&quot;: &quot;商城&quot;,
+  &quot;url&quot;: &quot;http://b2cv4.qihetaiji.com&quot; 
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.e9c0b1e7.js" defer></script><script src="/assets/js/2.733019b2.js" defer></script><script src="/assets/js/16.4ae2d59d.js" defer></script>
+  </body>
+</html>
